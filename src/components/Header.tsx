@@ -6,7 +6,7 @@ import {
   ActionIcon,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import { IconSun, IconMoon } from "@tabler/icons-react";
+import { IconSun, IconMoon, IconGrillFork} from "@tabler/icons-react";
 
 interface HeaderComponentProps {
   opened: boolean;
@@ -41,6 +41,19 @@ export default function HeaderComponent({
         >
           TRACKER-APP
         </Text>
+
+        </Group>
+      <Group>
+        <ActionIcon
+          variant="filled"
+          color={isDark ? "yellow" : "blue"}
+          onClick={toggleColorScheme}
+          size="lg"
+          aria-label={isDark ? "Light mode" : "Dark mode"}
+        >
+          {isDark ? <IconGrillFork size={20} /> : <IconGrillFork size={20} />}
+        </ActionIcon>
+
       </Group>
       <Group gap={5}>
         <ActionIcon

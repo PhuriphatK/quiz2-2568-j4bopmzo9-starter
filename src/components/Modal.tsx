@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+  Fieldset,
   Modal,
   TextInput,
   NumberInput,
@@ -32,6 +33,7 @@ export default function AddFoodModal({}: AddFoodModalProps) {
   console.log(val_number + 100); // 600.0
 
   return {
-    /* Type additional text here. */
+    
   };
+  
 }

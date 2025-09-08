@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
-import { AppShell } from "@mantine/core";
+import { AppShell} from "@mantine/core";
 import HeaderComponent from "../components/Header";
+import FooterComponent from "../components/Footer";
 import { useDisclosure } from "@mantine/hooks";
 
 export default function MainLayout() {
@@ -15,6 +16,15 @@ export default function MainLayout() {
       <AppShell.Header>
         <HeaderComponent opened={opened} toggle={toggle} />
       </AppShell.Header>
+
+      <AppShell.Footer>
+        <FooterComponent
+          year="2025"
+          fullName="Phuriphat"
+          studentId="670612127"
+        />
+      </AppShell.Footer>
+
       <AppShell.Main>
         <Outlet />
       </AppShell.Main>
